@@ -1,0 +1,18 @@
+{
+  "name": "REALITROS Menu",
+  "short_name": "REALITROS",
+  "description": "Menú dinámico tipo delivery para REALITROS.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f1115",
+  "theme_color": "#0f1115",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,66 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REALITROS | Experiencias en Litro</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REALITROS: menú dinámico tipo delivery, pedidos por WhatsApp y app instalable PWA.">
+  <meta name="theme-color" content="#0f1115">
+  <title>REALITROS | Menú dinámico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="top-nav">
+    <a class="brand" href="#">REALITROS</a>
+    <button id="installBtn" class="btn outline" type="button" hidden>Descargar app</button>
+  </header>
 
-<header class="hero">
-    <h1>REALITROS</h1>
-    <p>No vendemos micheladas. Creamos experiencias en litro.</p>
-    <div class="buttons">
-        <a class="btn primary" href="#ubicacion">Ver ubicación</a>
-        <a class="btn outline" href="https://wa.me/5210000000000">Pedir por WhatsApp</a>
-    </div>
-</header>
+  <main class="layout">
+    <section class="content">
+      <div class="hero">
+        <p class="eyebrow">ENTREGA • PICKUP • FIESTA</p>
+        <h1>Tu menú REALITROS <span>tipo delivery</span></h1>
+        <p>Explora por categorías, agrega al carrito y pide en segundos como en apps tipo Uber Eats.</p>
+      </div>
 
-<section class="experiencia">
-    <h2>La Experiencia REALITROS</h2>
-    <p>
-        REALITROS nace para romper lo tradicional.
-        Litros bien servidos, mezclas intensas y un ambiente que se vive,
-        no se explica.
-    </p>
-</section>
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="Buscar litros, snacks o combos..." aria-label="Buscar productos">
+        <div id="categoryChips" class="chips" aria-label="Categorías"></div>
+      </div>
 
-<section class="productos">
-    <h2>Nuestro Producto</h2>
+      <section id="productGrid" class="product-grid" aria-live="polite"></section>
+    </section>
 
-    <div class="grid">
+    <aside class="cart" aria-labelledby="cartTitle">
+      <h2 id="cartTitle">Tu pedido</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <p><span>Subtotal</span><strong id="subtotal">$0</strong></p>
+        <p><span>Envío</span><strong id="delivery">$25</strong></p>
+        <p class="total"><span>Total</span><strong id="total">$25</strong></p>
+      </div>
+      <button id="checkoutBtn" class="btn primary full" type="button">Pedir por WhatsApp</button>
+    </aside>
+  </main>
 
-        <div class="card">
-            <h3>Litros Clásicos</h3>
-            <p>Base cerveza preparada al nivel que tú elijas.</p>
-        </div>
+  <template id="productTemplate">
+    <article class="product-card">
+      <figure class="product-illustration" aria-hidden="true">
+        <span class="product-icon"></span>
+      </figure>
+      <p class="badge"></p>
+      <h3 class="title"></h3>
+      <p class="desc"></p>
+      <div class="meta">
+        <strong class="price"></strong>
+        <button class="btn small primary" type="button">Agregar</button>
+      </div>
+    </article>
+  </template>
 
-        <div class="card">
-            <h3>Especialidades</h3>
-            <p>Mezclas exclusivas con ingredientes premium.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ediciones Especiales</h3>
-            <p>Sabores de temporada y colaboraciones únicas.</p>
-        </div>
-
-    </div>
-</section>
-
-<section id="ubicacion" class="ubicacion">
-    <h2>Visítanos</h2>
-    <p>Próximamente dirección oficial</p>
-    <a class="btn primary" href="https://wa.me/5210000000000">Contactar por WhatsApp</a>
-</section>
-
-<footer>
-    <h3>REALITROS</h3>
-    <p>Síguenos. Vive REALITROS.</p>
-</footer>
-
+  <script src="app.js" defer></script>
 </body>
 </html>
