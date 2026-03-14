@@ -3,62 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="REALITROS: litros preparados, mezclas intensas y experiencias únicas.">
-  <title>REALITROS | Experiencias en Litro</title>
+  <meta name="description" content="REALITROS: litros preparados, música, ambiente y sabor para romper la rutina.">
+  <title>REALITROS | Litros preparados y experiencia nocturna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="hero" aria-labelledby="site-title">
-    <h1 id="site-title">REALITROS</h1>
-    <p>No vendemos micheladas. Creamos experiencias en litro.</p>
-    <nav class="buttons" aria-label="Acciones principales">
-      <a class="btn primary" href="#ubicacion">Ver ubicación</a>
-      <a class="btn outline" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+  <header class="hero" id="inicio">
+    <nav class="topbar">
+      <a class="brand" href="#inicio">REALITROS</a>
+      <div class="topbar-links">
+        <a href="#menu">Menú</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
     </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">SABOR • MÚSICA • AMBIENTE</p>
+      <h1>La noche sabe mejor en <span>REALITROS</span></h1>
+      <p class="hero-copy">
+        Litros bien servidos, combinaciones intensas y el mood perfecto para armar el plan.
+        Si buscas algo estilo “La Que Ka Feliz”, aquí lo llevamos a versión REALITROS.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#menu">Ver menú destacado</a>
+        <a class="btn outline" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="experiencia" aria-labelledby="experiencia-title">
-      <h2 id="experiencia-title">La Experiencia REALITROS</h2>
+    <section class="section intro" id="experiencia">
+      <h2>Una experiencia que prende desde el primer litro</h2>
       <p>
-        REALITROS nace para romper lo tradicional.
-        Litros bien servidos, mezclas intensas y un ambiente que se vive,
-        no se explica.
+        En REALITROS mezclamos coctelería urbana, cheve fría y un ambiente con energía alta.
+        Nuestro concepto está inspirado en el estilo visual y dinámico de La Que Ka Feliz,
+        pero con identidad propia para esta marca.
       </p>
     </section>
 
-    <section class="productos" aria-labelledby="producto-title">
-      <h2 id="producto-title">Nuestro Producto</h2>
+    <section class="section menu" id="menu">
+      <div class="section-head">
+        <h2>Menú estrella</h2>
+        <p>Elige tu favorito y súmale toppings, escarchado o extra sabor.</p>
+      </div>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Litros Clásicos</h3>
-          <p>Base cerveza preparada al nivel que tú elijas.</p>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <p class="tag">Top ventas</p>
+          <h3>Litro Mango Fuego</h3>
+          <p>Chamoy, mango natural, toque picosito y cerveza preparada.</p>
+          <strong>$125</strong>
         </article>
-
-        <article class="card">
-          <h3>Especialidades</h3>
-          <p>Mezclas exclusivas con ingredientes premium.</p>
+        <article class="menu-card">
+          <p class="tag">Signature</p>
+          <h3>Azul Eléctrico</h3>
+          <p>Mezcla tropical con acento cítrico, hielo frappé y escarchado neon.</p>
+          <strong>$135</strong>
         </article>
-
-        <article class="card">
-          <h3>Ediciones Especiales</h3>
-          <p>Sabores de temporada y colaboraciones únicas.</p>
+        <article class="menu-card">
+          <p class="tag">Nuevo</p>
+          <h3>Fresa Party</h3>
+          <p>Fresa, limón, dulzor balanceado y final refrescante.</p>
+          <strong>$130</strong>
         </article>
       </div>
     </section>
 
-    <section id="ubicacion" class="ubicacion" aria-labelledby="ubicacion-title">
-      <h2 id="ubicacion-title">Visítanos</h2>
-      <p>Próximamente dirección oficial</p>
-      <a class="btn primary" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+    <section class="section features">
+      <article>
+        <h3>DJ Set + Playlist</h3>
+        <p>Noches con música que se siente desde que llegas.</p>
+      </article>
+      <article>
+        <h3>Zona para fotos</h3>
+        <p>Iluminación y spots visuales para subir historias brutales.</p>
+      </article>
+      <article>
+        <h3>Promos por grupo</h3>
+        <p>Arma el plan con tu crew y pregunta por combos especiales.</p>
+      </article>
+    </section>
+
+    <section class="section location" id="ubicacion">
+      <h2>Visítanos en REALITROS</h2>
+      <p>Próximamente dirección oficial • Servicio por WhatsApp disponible.</p>
+      <a class="btn primary" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Reservar / Pedir ahora</a>
     </section>
   </main>
 
   <footer>
-    <h3>REALITROS</h3>
-    <p>Síguenos. Vive REALITROS.</p>
+    <p>© REALITROS — Vive el litro, vive la noche.</p>
   </footer>
 </body>
 </html>
