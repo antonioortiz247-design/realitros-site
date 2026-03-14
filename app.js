@@ -1,11 +1,11 @@
 const PRODUCTS = [
-  { id: 1, name: 'Litro Mango Fuego', category: 'Litros', badge: 'Top', desc: 'Mango, chamoy, limón y escarchado picosito.', price: 125 },
-  { id: 2, name: 'Litro Azul Eléctrico', category: 'Litros', badge: 'Nuevo', desc: 'Mezcla tropical azul con toque cítrico.', price: 135 },
-  { id: 3, name: 'Litro Fresa Party', category: 'Litros', badge: 'Popular', desc: 'Fresa natural y dulzor balanceado.', price: 130 },
-  { id: 4, name: 'Nachos Explosivos', category: 'Snacks', badge: 'Snack', desc: 'Queso, jalapeño y carne sazonada.', price: 95 },
-  { id: 5, name: 'Papas Xtreme', category: 'Snacks', badge: 'Snack', desc: 'Papas crujientes con aderezo especial.', price: 85 },
-  { id: 6, name: 'Combo Night Out', category: 'Combos', badge: 'Ahorro', desc: '2 litros + snack para compartir.', price: 320 },
-  { id: 7, name: 'Combo Crew', category: 'Combos', badge: 'Ahorro', desc: '4 litros + 2 snacks + topping extra.', price: 590 }
+  { id: 1, name: 'Litro Mango Fuego', category: 'Litros', badge: 'Top', desc: 'Mango, chamoy, limón y escarchado picosito.', price: 125, icon: '🥭🍺', art: 'art-litros' },
+  { id: 2, name: 'Litro Azul Eléctrico', category: 'Litros', badge: 'Nuevo', desc: 'Mezcla tropical azul con toque cítrico.', price: 135, icon: '🫐⚡', art: 'art-litros' },
+  { id: 3, name: 'Litro Fresa Party', category: 'Litros', badge: 'Popular', desc: 'Fresa natural y dulzor balanceado.', price: 130, icon: '🍓🎉', art: 'art-litros' },
+  { id: 4, name: 'Nachos Explosivos', category: 'Snacks', badge: 'Snack', desc: 'Queso, jalapeño y carne sazonada.', price: 95, icon: '🧀🌶️', art: 'art-snacks' },
+  { id: 5, name: 'Papas Xtreme', category: 'Snacks', badge: 'Snack', desc: 'Papas crujientes con aderezo especial.', price: 85, icon: '🍟🔥', art: 'art-snacks' },
+  { id: 6, name: 'Combo Night Out', category: 'Combos', badge: 'Ahorro', desc: '2 litros + snack para compartir.', price: 320, icon: '🍻🍿', art: 'art-combos' },
+  { id: 7, name: 'Combo Crew', category: 'Combos', badge: 'Ahorro', desc: '4 litros + 2 snacks + topping extra.', price: 590, icon: '🎊🥳', art: 'art-combos' }
 ];
 
 const WHATSAPP = '5210000000000';
@@ -83,6 +83,8 @@ function renderProducts() {
 
   list.forEach((product) => {
     const node = template.content.cloneNode(true);
+    node.querySelector('.product-illustration').classList.add(product.art);
+    node.querySelector('.product-icon').textContent = product.icon;
     node.querySelector('.badge').textContent = `${product.badge} • ${product.category}`;
     node.querySelector('.title').textContent = product.name;
     node.querySelector('.desc').textContent = product.desc;
