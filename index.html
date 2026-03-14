@@ -1,66 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REALITROS | Experiencias en Litro</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REALITROS: litros preparados, mezclas intensas y experiencias únicas.">
+  <title>REALITROS | Experiencias en Litro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<header class="hero">
-    <h1>REALITROS</h1>
+  <header class="hero" aria-labelledby="site-title">
+    <h1 id="site-title">REALITROS</h1>
     <p>No vendemos micheladas. Creamos experiencias en litro.</p>
-    <div class="buttons">
-        <a class="btn primary" href="#ubicacion">Ver ubicación</a>
-        <a class="btn outline" href="https://wa.me/5210000000000">Pedir por WhatsApp</a>
-    </div>
-</header>
+    <nav class="buttons" aria-label="Acciones principales">
+      <a class="btn primary" href="#ubicacion">Ver ubicación</a>
+      <a class="btn outline" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+    </nav>
+  </header>
 
-<section class="experiencia">
-    <h2>La Experiencia REALITROS</h2>
-    <p>
+  <main>
+    <section class="experiencia" aria-labelledby="experiencia-title">
+      <h2 id="experiencia-title">La Experiencia REALITROS</h2>
+      <p>
         REALITROS nace para romper lo tradicional.
         Litros bien servidos, mezclas intensas y un ambiente que se vive,
         no se explica.
-    </p>
-</section>
+      </p>
+    </section>
 
-<section class="productos">
-    <h2>Nuestro Producto</h2>
+    <section class="productos" aria-labelledby="producto-title">
+      <h2 id="producto-title">Nuestro Producto</h2>
 
-    <div class="grid">
+      <div class="grid">
+        <article class="card">
+          <h3>Litros Clásicos</h3>
+          <p>Base cerveza preparada al nivel que tú elijas.</p>
+        </article>
 
-        <div class="card">
-            <h3>Litros Clásicos</h3>
-            <p>Base cerveza preparada al nivel que tú elijas.</p>
-        </div>
+        <article class="card">
+          <h3>Especialidades</h3>
+          <p>Mezclas exclusivas con ingredientes premium.</p>
+        </article>
 
-        <div class="card">
-            <h3>Especialidades</h3>
-            <p>Mezclas exclusivas con ingredientes premium.</p>
-        </div>
+        <article class="card">
+          <h3>Ediciones Especiales</h3>
+          <p>Sabores de temporada y colaboraciones únicas.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="card">
-            <h3>Ediciones Especiales</h3>
-            <p>Sabores de temporada y colaboraciones únicas.</p>
-        </div>
+    <section id="ubicacion" class="ubicacion" aria-labelledby="ubicacion-title">
+      <h2 id="ubicacion-title">Visítanos</h2>
+      <p>Próximamente dirección oficial</p>
+      <a class="btn primary" href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+    </section>
+  </main>
 
-    </div>
-</section>
-
-<section id="ubicacion" class="ubicacion">
-    <h2>Visítanos</h2>
-    <p>Próximamente dirección oficial</p>
-    <a class="btn primary" href="https://wa.me/5210000000000">Contactar por WhatsApp</a>
-</section>
-
-<footer>
+  <footer>
     <h3>REALITROS</h3>
     <p>Síguenos. Vive REALITROS.</p>
-</footer>
-
+  </footer>
 </body>
 </html>
